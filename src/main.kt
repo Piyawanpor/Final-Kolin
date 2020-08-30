@@ -19,6 +19,12 @@ fun main() {
     var myCanine = Canine ()
     myCanine.makeNoise()
     myCanine.eat()
+
+    print("ฉีดยา")
+    val myvet = vet()
+    myvet.giveShog(myCanine)
+    myvet.giveShog(myHippo)
+    myvet.giveShog(myLion)
 }
 open class Animal {
     open val image = ""
@@ -87,5 +93,9 @@ class Wolf : Canine(){
     }
     override fun eat() {
          println("หมาป่ากิน $food")
+    }
+}class vet {
+    fun giveShog(animal: Animal){
+        animal.makeNoise()
     }
 }
